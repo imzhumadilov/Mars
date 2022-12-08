@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import SnapKit
 
 final class InitialViewController: UIViewController {
 
     // MARK: - UIElements
+    private let bgImageView = UIImageView()
     
     // MARK: - Props
     public var viewModel: InitialViewModel?
@@ -34,19 +36,25 @@ final class InitialViewController: UIViewController {
     
     // MARK: - Setup functions
     private func setupComponents() {
-        self.navigationItem.title = ""
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.bgImageView.contentMode = .scaleAspectFill
+        self.bgImageView.image = UIImage(named: "Launch")
     }
     
     private func setupActions() { }
     
     private func applyStyles() {
-        self.view.backgroundColor = UIColor.white
+        self.view.backgroundColor = UIColor.clear
     }
     
-    private func configureSubviews() { }
+    private func configureSubviews() {
+        self.view.addSubview(self.bgImageView)
+    }
     
-    private func configureConstraints() { }
+    private func configureConstraints() {
+        self.bgImageView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+    }
     
     // MARK: - Module functions
     private func bindViewModel() {

@@ -6,6 +6,8 @@
 //  Copyright © 2022 ___ORGANIZATIONNAME___. All rights reserved.
 //
 
+import Foundation
+
 protocol InitialViewModelInput {
     func configure(with data: Any?)
 }
@@ -25,7 +27,9 @@ class InitialViewModel {
     
     // MARK: - Public functions
     func viewIsReady() {
-        self.openMainVC?()
+        Timer.scheduledTimer(withTimeInterval: 4, repeats: false, block: { [weak self] _ in
+            self?.openMainVC?()
+        })
     }
 }
 

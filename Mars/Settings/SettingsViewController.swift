@@ -11,6 +11,7 @@ import UIKit
 final class SettingsViewController: UIViewController {
 
     // MARK: - UIElements
+    private let bgImageView = UIImageView()
     
     // MARK: - Props
     public var viewModel: SettingsViewModel?
@@ -32,19 +33,25 @@ final class SettingsViewController: UIViewController {
     
     // MARK: - Setup functions
     private func setupComponents() {
-        self.navigationItem.title = ""
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.bgImageView.contentMode = .scaleAspectFill
+        self.bgImageView.image = UIImage(named: "SettingsBg")
     }
     
     private func setupActions() { }
     
     private func applyStyles() {
-        self.view.backgroundColor = UIColor.green
+        self.view.backgroundColor = UIColor.clear
     }
     
-    private func configureSubviews() { }
+    private func configureSubviews() {
+        self.view.addSubview(self.bgImageView)
+    }
     
-    private func configureConstraints() { }
+    private func configureConstraints() {
+        self.bgImageView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+    }
     
     // MARK: - Module functions
     private func bindViewModel() { }
