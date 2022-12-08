@@ -1,0 +1,28 @@
+PODS:
+  - Alamofire (5.6.1)
+  - IQKeyboardManagerSwift (6.5.10)
+  - Kingfisher (7.3.0)
+  - SnapKit (5.6.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - IQKeyboardManagerSwift
+  - Kingfisher
+  - SnapKit
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - IQKeyboardManagerSwift
+    - Kingfisher
+    - SnapKit
+
+SPEC CHECKSUMS:
+  Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
+  IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
+  Kingfisher: cdb1189a9223b1bc028816bd47c8b8101a58831c
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+
+PODFILE CHECKSUM: c59ed0a201a6fe621a0fdfaca953e63109d576d6
+
+COCOAPODS: 1.11.2

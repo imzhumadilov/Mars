@@ -23,6 +23,7 @@
 		282C73AD2942656E005EC424 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282C73A82942656E005EC424 /* SettingsModel.swift */; };
 		282C73AE2942656E005EC424 /* SettingsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282C73A92942656E005EC424 /* SettingsConfigurator.swift */; };
 		282C73AF2942656E005EC424 /* SettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282C73AA2942656E005EC424 /* SettingsRouter.swift */; };
+		5782BE55895D524B3A3D90A9 /* Pods_Mars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F42DF6D6F3922C1628F576 /* Pods_Mars.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,9 @@
 		282C73A82942656E005EC424 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
 		282C73A92942656E005EC424 /* SettingsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsConfigurator.swift; sourceTree = "<group>"; };
 		282C73AA2942656E005EC424 /* SettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRouter.swift; sourceTree = "<group>"; };
+		59B6525C97563BD489771490 /* Pods-Mars.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mars.release.xcconfig"; path = "Target Support Files/Pods-Mars/Pods-Mars.release.xcconfig"; sourceTree = "<group>"; };
+		D6F42DF6D6F3922C1628F576 /* Pods_Mars.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mars.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4812CF36C87D4D19C59D744 /* Pods-Mars.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mars.debug.xcconfig"; path = "Target Support Files/Pods-Mars/Pods-Mars.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,17 +55,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5782BE55895D524B3A3D90A9 /* Pods_Mars.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18ED5272559A7239057C2356 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E4812CF36C87D4D19C59D744 /* Pods-Mars.debug.xcconfig */,
+				59B6525C97563BD489771490 /* Pods-Mars.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		282C7377294263CB005EC424 = {
 			isa = PBXGroup;
 			children = (
 				282C7382294263CB005EC424 /* Mars */,
 				282C7381294263CB005EC424 /* Products */,
+				18ED5272559A7239057C2356 /* Pods */,
+				B7300B229B83B26A0BC68CEB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,6 +129,14 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		B7300B229B83B26A0BC68CEB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D6F42DF6D6F3922C1628F576 /* Pods_Mars.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -120,9 +144,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 282C7397294263CD005EC424 /* Build configuration list for PBXNativeTarget "Mars" */;
 			buildPhases = (
+				83FF61901340E82A25991C61 /* [CP] Check Pods Manifest.lock */,
 				282C737C294263CB005EC424 /* Sources */,
 				282C737D294263CB005EC424 /* Frameworks */,
 				282C737E294263CB005EC424 /* Resources */,
+				DF064EF9845321F9EAD37D69 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -177,6 +203,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		83FF61901340E82A25991C61 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mars-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF064EF9845321F9EAD37D69 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mars/Pods-Mars-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mars/Pods-Mars-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mars/Pods-Mars-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		282C737C294263CB005EC424 /* Sources */ = {
@@ -330,6 +398,7 @@
 		};
 		282C7398294263CD005EC424 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4812CF36C87D4D19C59D744 /* Pods-Mars.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -341,21 +410,23 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mars.project.Mars;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mars.project;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		282C7399294263CD005EC424 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59B6525C97563BD489771490 /* Pods-Mars.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -367,16 +438,17 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mars.project.Mars;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mars.project;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
