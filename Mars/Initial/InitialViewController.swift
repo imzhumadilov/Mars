@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import IQKeyboardManagerSwift
 
 final class InitialViewController: UIViewController {
 
@@ -36,6 +37,9 @@ final class InitialViewController: UIViewController {
     
     // MARK: - Setup functions
     private func setupComponents() {
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+        
         self.bgImageView.contentMode = .scaleAspectFill
         self.bgImageView.image = UIImage(named: "Launch")
     }

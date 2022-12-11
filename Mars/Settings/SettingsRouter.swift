@@ -6,7 +6,9 @@
 //  Copyright © 2022 ___ORGANIZATIONNAME___. All rights reserved.
 //
 
-protocol SettingsRouterInput { }
+protocol SettingsRouterInput {
+    func showAlert(title: String, message: String)
+}
 
 final class SettingsRouter: SettingsRouterInput {
     
@@ -14,6 +16,9 @@ final class SettingsRouter: SettingsRouterInput {
     weak var viewController: SettingsViewController?
     
     // MARK: - SettingsRouterInput
+    func showAlert(title: String, message: String) {
+        self.viewController?.showAlert(title: title, message: message)
+    }
     
     // MARK: - Module functions
 }

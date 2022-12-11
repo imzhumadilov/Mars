@@ -25,6 +25,7 @@
 		282C73AF2942656E005EC424 /* SettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282C73AA2942656E005EC424 /* SettingsRouter.swift */; };
 		28C1D7FA2946614300C85CCA /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C1D7F92946614300C85CCA /* PickerView.swift */; };
 		28C1D7FC2946617600C85CCA /* PickerField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C1D7FB2946617600C85CCA /* PickerField.swift */; };
+		28C1D7FE29466E0E00C85CCA /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C1D7FD29466E0E00C85CCA /* UIColor+.swift */; };
 		5782BE55895D524B3A3D90A9 /* Pods_Mars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F42DF6D6F3922C1628F576 /* Pods_Mars.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		282C73AA2942656E005EC424 /* SettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRouter.swift; sourceTree = "<group>"; };
 		28C1D7F92946614300C85CCA /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 		28C1D7FB2946617600C85CCA /* PickerField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerField.swift; sourceTree = "<group>"; };
+		28C1D7FD29466E0E00C85CCA /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		59B6525C97563BD489771490 /* Pods-Mars.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mars.release.xcconfig"; path = "Target Support Files/Pods-Mars/Pods-Mars.release.xcconfig"; sourceTree = "<group>"; };
 		D6F42DF6D6F3922C1628F576 /* Pods_Mars.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mars.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4812CF36C87D4D19C59D744 /* Pods-Mars.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mars.debug.xcconfig"; path = "Target Support Files/Pods-Mars/Pods-Mars.debug.xcconfig"; sourceTree = "<group>"; };
@@ -99,11 +101,12 @@
 				282C7394294263CD005EC424 /* Info.plist */,
 				282C7383294263CB005EC424 /* AppDelegate.swift */,
 				282C7385294263CB005EC424 /* SceneDelegate.swift */,
+				28C1D7FD29466E0E00C85CCA /* UIColor+.swift */,
 				282C7387294263CB005EC424 /* ViewController.swift */,
 				282C738F294263CD005EC424 /* Assets.xcassets */,
+				282C739A2942645E005EC424 /* Initial */,
 				282C7391294263CD005EC424 /* LaunchScreen.storyboard */,
 				282C738C294263CB005EC424 /* Mars.xcdatamodeld */,
-				282C739A2942645E005EC424 /* Initial */,
 				282C73A52942653C005EC424 /* Settings */,
 			);
 			path = Mars;
@@ -273,6 +276,7 @@
 				282C73A02942647C005EC424 /* InitialViewModel.swift in Sources */,
 				282C73A42942647C005EC424 /* InitialRouter.swift in Sources */,
 				282C7388294263CB005EC424 /* ViewController.swift in Sources */,
+				28C1D7FE29466E0E00C85CCA /* UIColor+.swift in Sources */,
 				28C1D7FA2946614300C85CCA /* PickerView.swift in Sources */,
 				282C73AE2942656E005EC424 /* SettingsConfigurator.swift in Sources */,
 				282C73AB2942656E005EC424 /* SettingsViewModel.swift in Sources */,
@@ -420,14 +424,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = N8WXG988VJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mars/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -449,14 +453,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = N8WXG988VJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mars/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -8,8 +8,8 @@
 import UIKit
 
 protocol PickerFieldDelegate: AnyObject {
-    func getData(textField: UITextField, text: String?)
-    func getData(textField: UITextField, row: Int)
+    func provideData(textField: UITextField, row: Int)
+    func provideDate(textField: UITextField, date: Date)
 }
 
 class PickerField: UITextField {
@@ -19,8 +19,9 @@ class PickerField: UITextField {
     private let datePickerView = UIDatePicker()
     private var type: PickerType = .camera
     private var list: [String] = []
-    private var row: Int = 0
-    public weak var pickerDelegate: PickerFieldDelegate?
+    private var row = 0
+    private var date = Date()
+    weak var pickerDelegate: PickerFieldDelegate?
     
     // MARK: - Init
     override init(frame: CGRect) {
@@ -47,16 +48,12 @@ class PickerField: UITextField {
         self.datePickerView.addTarget(self, action: #selector(self.datePickerChanged), for: .valueChanged)
     }
     
-    private func getData() {
-        self.pickerDelegate?.getData(textField: self, text: self.text)
-        self.pickerDelegate?.getData(textField: self, row: self.row)
-    }
-    
     func setupList(list: [String]) {
         self.list = list
     }
     
     func configure(type: PickerType) {
+        self.type = type
         switch type {
         case .camera:
             self.inputView = self.pickerView
@@ -73,7 +70,8 @@ class PickerField: UITextField {
     
     @objc
     func datePickerChanged() {
-        print(#function)
+        self.text = self.date.toString()
+        self.date = self.datePickerView.date
     }
 }
 
@@ -89,12 +87,14 @@ extension PickerField: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        guard self.list.count > row else { return nil }
         return self.list[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         guard self.list.count > row else { return }
         self.text = self.list[row]
+        self.row = row
     }
 }
 
@@ -106,6 +106,14 @@ extension PickerField: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if !self.list.isEmpty { self.getData() }
+        switch self.type {
+        case .camera:
+            guard self.list.count > self.row else { return }
+            self.text = self.list[self.row]
+            self.pickerDelegate?.provideData(textField: textField, row: self.row)
+        case .date:
+            self.text = self.date.toString()
+            self.pickerDelegate?.provideDate(textField: textField, date: self.date)
+        }
     }
 }

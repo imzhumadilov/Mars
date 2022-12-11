@@ -77,9 +77,10 @@ class PickerView: UIView {
         }
     }
     
-    func configurePicker(title: String, type: PickerType) {
+    func configurePicker(title: String, type: PickerType, delegate: PickerFieldDelegate? = nil) {
         self.titleLabel.text = title
         self.pickerField.configure(type: type)
+        self.pickerField.pickerDelegate = delegate
     }
     
     func configureList(_ list: [String]) {

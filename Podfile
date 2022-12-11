@@ -10,5 +10,6 @@ target 'Mars' do
   pod 'Kingfisher'
   pod 'IQKeyboardManagerSwift'
   pod 'Alamofire'
+  pod 'MBProgressHUD'
 
 end
