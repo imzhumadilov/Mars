@@ -61,18 +61,7 @@ final class InitialViewController: UIViewController {
     }
     
     // MARK: - Module functions
-    private func bindViewModel() {
-        self.viewModel?.openMainVC = { [weak self] in
-            guard let self = self else { return }
-            let vc = SettingsConfigurator.create()
-            SettingsConfigurator.configure(with: vc)
-            vc.modalPresentationStyle = .overFullScreen
-            
-            DispatchQueue.main.async {
-                self.present(vc, animated: false)
-            }
-        }
-    }
+    private func bindViewModel() { }
 }
 
 // MARK: - Actions

@@ -13,7 +13,7 @@ class SettingsModel {
     // MARK: - Props
     let cameraList = CameraList.allCases
     var camera: CameraList?
-    var date: String?
+    var date: Date?
     
     // MARK: - Initialization
     init() { }

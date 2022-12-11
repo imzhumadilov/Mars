@@ -18,8 +18,6 @@ class InitialViewModel {
     private var model: InitialModel
     public var router: InitialRouterInput?
     
-    var openMainVC: (() -> ())?
-    
     // MARK: - Initialization
     init() {
         self.model = InitialModel()
@@ -28,7 +26,7 @@ class InitialViewModel {
     // MARK: - Public functions
     func viewIsReady() {
         Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: { [weak self] _ in
-            self?.openMainVC?()
+            self?.router?.showSettings()
         })
     }
 }

@@ -38,6 +38,8 @@ final class SettingsViewController: UIViewController {
     
     // MARK: - Setup functions
     private func setupComponents() {
+        self.navigationController?.navigationBar.isHidden = true
+        
         self.bgImageView.contentMode = .scaleAspectFill
         self.bgImageView.image = UIImage(named: "SettingsBg")
         

@@ -37,16 +37,16 @@ class SettingsViewModel {
     }
     
     func provideDate(_ date: Date) {
-        self.model.date = date.toString(format: "yyyy-MM-dd")
+        self.model.date = date
     }
     
     func exploreButtonTapped() {
-        guard let camera = self.model.camera?.rawValue,
+        guard let camera = self.model.camera,
         let date = self.model.date else {
             self.router?.showAlert(title: "Error", message: "Please fil all fields")
             return
         }
-//        NetworkService().getPhotos(date: date, camera: camera, page: 1, apiKey: "DEMO_KEY")
+        self.router?.showPhotos(model: PhotosModel(camera: camera, date: date))
     }
 }
 

@@ -6,7 +6,11 @@
 //  Copyright © 2022 ___ORGANIZATIONNAME___. All rights reserved.
 //
 
-protocol InitialRouterInput { }
+import UIKit
+
+protocol InitialRouterInput {
+    func showSettings()
+}
 
 final class InitialRouter: InitialRouterInput {
     
@@ -14,6 +18,16 @@ final class InitialRouter: InitialRouterInput {
     weak var viewController: InitialViewController?
     
     // MARK: - InitialRouterInput
+    func showSettings() {
+        let vc = SettingsConfigurator.create()
+        SettingsConfigurator.configure(with: vc)
+        let nc = UINavigationController(rootViewController: vc)
+        nc.modalPresentationStyle = .overFullScreen
+        
+        DispatchQueue.main.async {
+            self.viewController?.present(nc, animated: false)
+        }
+    }
     
     // MARK: - Module functions
 }

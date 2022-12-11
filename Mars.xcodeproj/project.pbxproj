@@ -27,6 +27,13 @@
 		28C1D7FC2946617600C85CCA /* PickerField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C1D7FB2946617600C85CCA /* PickerField.swift */; };
 		28C1D7FE29466E0E00C85CCA /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C1D7FD29466E0E00C85CCA /* UIColor+.swift */; };
 		28C1D80029467A5000C85CCA /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C1D7FF29467A5000C85CCA /* NetworkService.swift */; };
+		28C1D80729467D5800C85CCA /* PhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C1D80229467D5800C85CCA /* PhotosViewModel.swift */; };
+		28C1D80829467D5800C85CCA /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C1D80329467D5800C85CCA /* PhotosViewController.swift */; };
+		28C1D80929467D5800C85CCA /* PhotosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C1D80429467D5800C85CCA /* PhotosModel.swift */; };
+		28C1D80A29467D5800C85CCA /* PhotosConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C1D80529467D5800C85CCA /* PhotosConfigurator.swift */; };
+		28C1D80B29467D5800C85CCA /* PhotosRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C1D80629467D5800C85CCA /* PhotosRouter.swift */; };
+		28C1D80D2946853B00C85CCA /* CollectionSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C1D80C2946853B00C85CCA /* CollectionSectionModel.swift */; };
+		28C1D810294688E800C85CCA /* PhotosResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C1D80F294688E800C85CCA /* PhotosResponse.swift */; };
 		5782BE55895D524B3A3D90A9 /* Pods_Mars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F42DF6D6F3922C1628F576 /* Pods_Mars.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +60,13 @@
 		28C1D7FB2946617600C85CCA /* PickerField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerField.swift; sourceTree = "<group>"; };
 		28C1D7FD29466E0E00C85CCA /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		28C1D7FF29467A5000C85CCA /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		28C1D80229467D5800C85CCA /* PhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModel.swift; sourceTree = "<group>"; };
+		28C1D80329467D5800C85CCA /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		28C1D80429467D5800C85CCA /* PhotosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosModel.swift; sourceTree = "<group>"; };
+		28C1D80529467D5800C85CCA /* PhotosConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosConfigurator.swift; sourceTree = "<group>"; };
+		28C1D80629467D5800C85CCA /* PhotosRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosRouter.swift; sourceTree = "<group>"; };
+		28C1D80C2946853B00C85CCA /* CollectionSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionSectionModel.swift; sourceTree = "<group>"; };
+		28C1D80F294688E800C85CCA /* PhotosResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosResponse.swift; sourceTree = "<group>"; };
 		59B6525C97563BD489771490 /* Pods-Mars.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mars.release.xcconfig"; path = "Target Support Files/Pods-Mars/Pods-Mars.release.xcconfig"; sourceTree = "<group>"; };
 		D6F42DF6D6F3922C1628F576 /* Pods_Mars.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mars.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4812CF36C87D4D19C59D744 /* Pods-Mars.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mars.debug.xcconfig"; path = "Target Support Files/Pods-Mars/Pods-Mars.debug.xcconfig"; sourceTree = "<group>"; };
@@ -104,13 +118,16 @@
 				282C7383294263CB005EC424 /* AppDelegate.swift */,
 				28C1D7FF29467A5000C85CCA /* NetworkService.swift */,
 				282C7385294263CB005EC424 /* SceneDelegate.swift */,
+				28C1D80C2946853B00C85CCA /* CollectionSectionModel.swift */,
 				28C1D7FD29466E0E00C85CCA /* UIColor+.swift */,
 				282C7387294263CB005EC424 /* ViewController.swift */,
 				282C738F294263CD005EC424 /* Assets.xcassets */,
 				282C739A2942645E005EC424 /* Initial */,
 				282C7391294263CD005EC424 /* LaunchScreen.storyboard */,
 				282C738C294263CB005EC424 /* Mars.xcdatamodeld */,
+				28C1D80129467D3300C85CCA /* Photos */,
 				282C73A52942653C005EC424 /* Settings */,
+				28C1D80F294688E800C85CCA /* PhotosResponse.swift */,
 			);
 			path = Mars;
 			sourceTree = "<group>";
@@ -147,6 +164,18 @@
 				28C1D7FB2946617600C85CCA /* PickerField.swift */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		28C1D80129467D3300C85CCA /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				28C1D80529467D5800C85CCA /* PhotosConfigurator.swift */,
+				28C1D80429467D5800C85CCA /* PhotosModel.swift */,
+				28C1D80629467D5800C85CCA /* PhotosRouter.swift */,
+				28C1D80329467D5800C85CCA /* PhotosViewController.swift */,
+				28C1D80229467D5800C85CCA /* PhotosViewModel.swift */,
+			);
+			path = Photos;
 			sourceTree = "<group>";
 		};
 		B7300B229B83B26A0BC68CEB /* Frameworks */ = {
@@ -272,21 +301,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				282C73AD2942656E005EC424 /* SettingsModel.swift in Sources */,
+				28C1D80A29467D5800C85CCA /* PhotosConfigurator.swift in Sources */,
 				282C738E294263CB005EC424 /* Mars.xcdatamodeld in Sources */,
 				282C73A32942647C005EC424 /* InitialConfigurator.swift in Sources */,
+				28C1D80B29467D5800C85CCA /* PhotosRouter.swift in Sources */,
 				282C73AF2942656E005EC424 /* SettingsRouter.swift in Sources */,
 				28C1D80029467A5000C85CCA /* NetworkService.swift in Sources */,
 				282C73AC2942656E005EC424 /* SettingsViewController.swift in Sources */,
+				28C1D80D2946853B00C85CCA /* CollectionSectionModel.swift in Sources */,
 				282C73A02942647C005EC424 /* InitialViewModel.swift in Sources */,
 				282C73A42942647C005EC424 /* InitialRouter.swift in Sources */,
 				282C7388294263CB005EC424 /* ViewController.swift in Sources */,
+				28C1D80829467D5800C85CCA /* PhotosViewController.swift in Sources */,
 				28C1D7FE29466E0E00C85CCA /* UIColor+.swift in Sources */,
+				28C1D810294688E800C85CCA /* PhotosResponse.swift in Sources */,
 				28C1D7FA2946614300C85CCA /* PickerView.swift in Sources */,
 				282C73AE2942656E005EC424 /* SettingsConfigurator.swift in Sources */,
 				282C73AB2942656E005EC424 /* SettingsViewModel.swift in Sources */,
+				28C1D80929467D5800C85CCA /* PhotosModel.swift in Sources */,
 				282C73A12942647C005EC424 /* InitialViewController.swift in Sources */,
 				282C7384294263CB005EC424 /* AppDelegate.swift in Sources */,
 				282C7386294263CB005EC424 /* SceneDelegate.swift in Sources */,
+				28C1D80729467D5800C85CCA /* PhotosViewModel.swift in Sources */,
 				28C1D7FC2946617600C85CCA /* PickerField.swift in Sources */,
 				282C73A22942647C005EC424 /* InitialModel.swift in Sources */,
 			);
