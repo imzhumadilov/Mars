@@ -27,7 +27,7 @@ class InitialViewModel {
     
     // MARK: - Public functions
     func viewIsReady() {
-        Timer.scheduledTimer(withTimeInterval: 4, repeats: false, block: { [weak self] _ in
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: { [weak self] _ in
             self?.openMainVC?()
         })
     }

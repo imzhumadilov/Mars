@@ -9,9 +9,11 @@
 import UIKit
 
 final class SettingsViewController: UIViewController {
-
+    
     // MARK: - UIElements
     private let bgImageView = UIImageView()
+    private let cameraView = PickerView()
+    private let dateView = PickerView()
     
     // MARK: - Props
     public var viewModel: SettingsViewModel?
@@ -35,6 +37,11 @@ final class SettingsViewController: UIViewController {
     private func setupComponents() {
         self.bgImageView.contentMode = .scaleAspectFill
         self.bgImageView.image = UIImage(named: "SettingsBg")
+    
+        self.cameraView.configurePicker(title: "Rover Camera", type: .camera)
+        self.cameraView.configureList(["1", "2"])
+        
+        self.dateView.configurePicker(title: "Date", type: .date)
     }
     
     private func setupActions() { }
@@ -45,11 +52,21 @@ final class SettingsViewController: UIViewController {
     
     private func configureSubviews() {
         self.view.addSubview(self.bgImageView)
+        self.view.addSubview(self.cameraView)
+        self.view.addSubview(self.dateView)
     }
     
     private func configureConstraints() {
         self.bgImageView.snp.makeConstraints {
             $0.edges.equalToSuperview()
+        }
+        self.cameraView.snp.makeConstraints {
+            $0.leading.trailing.equalToSuperview()
+            $0.centerY.equalToSuperview().offset(-48)
+        }
+        self.dateView.snp.makeConstraints {
+            $0.leading.trailing.equalToSuperview()
+            $0.centerY.equalToSuperview().offset(48)
         }
     }
     

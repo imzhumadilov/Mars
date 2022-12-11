@@ -23,6 +23,8 @@
 		282C73AD2942656E005EC424 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282C73A82942656E005EC424 /* SettingsModel.swift */; };
 		282C73AE2942656E005EC424 /* SettingsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282C73A92942656E005EC424 /* SettingsConfigurator.swift */; };
 		282C73AF2942656E005EC424 /* SettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282C73AA2942656E005EC424 /* SettingsRouter.swift */; };
+		28C1D7FA2946614300C85CCA /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C1D7F92946614300C85CCA /* PickerView.swift */; };
+		28C1D7FC2946617600C85CCA /* PickerField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C1D7FB2946617600C85CCA /* PickerField.swift */; };
 		5782BE55895D524B3A3D90A9 /* Pods_Mars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F42DF6D6F3922C1628F576 /* Pods_Mars.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		282C73A82942656E005EC424 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
 		282C73A92942656E005EC424 /* SettingsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsConfigurator.swift; sourceTree = "<group>"; };
 		282C73AA2942656E005EC424 /* SettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRouter.swift; sourceTree = "<group>"; };
+		28C1D7F92946614300C85CCA /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
+		28C1D7FB2946617600C85CCA /* PickerField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerField.swift; sourceTree = "<group>"; };
 		59B6525C97563BD489771490 /* Pods-Mars.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mars.release.xcconfig"; path = "Target Support Files/Pods-Mars/Pods-Mars.release.xcconfig"; sourceTree = "<group>"; };
 		D6F42DF6D6F3922C1628F576 /* Pods_Mars.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mars.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4812CF36C87D4D19C59D744 /* Pods-Mars.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mars.debug.xcconfig"; path = "Target Support Files/Pods-Mars/Pods-Mars.debug.xcconfig"; sourceTree = "<group>"; };
@@ -125,8 +129,18 @@
 				282C73AA2942656E005EC424 /* SettingsRouter.swift */,
 				282C73A72942656E005EC424 /* SettingsViewController.swift */,
 				282C73A62942656E005EC424 /* SettingsViewModel.swift */,
+				28C1D7F82946612000C85CCA /* CustomView */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		28C1D7F82946612000C85CCA /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				28C1D7F92946614300C85CCA /* PickerView.swift */,
+				28C1D7FB2946617600C85CCA /* PickerField.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 		B7300B229B83B26A0BC68CEB /* Frameworks */ = {
@@ -259,11 +273,13 @@
 				282C73A02942647C005EC424 /* InitialViewModel.swift in Sources */,
 				282C73A42942647C005EC424 /* InitialRouter.swift in Sources */,
 				282C7388294263CB005EC424 /* ViewController.swift in Sources */,
+				28C1D7FA2946614300C85CCA /* PickerView.swift in Sources */,
 				282C73AE2942656E005EC424 /* SettingsConfigurator.swift in Sources */,
 				282C73AB2942656E005EC424 /* SettingsViewModel.swift in Sources */,
 				282C73A12942647C005EC424 /* InitialViewController.swift in Sources */,
 				282C7384294263CB005EC424 /* AppDelegate.swift in Sources */,
 				282C7386294263CB005EC424 /* SceneDelegate.swift in Sources */,
+				28C1D7FC2946617600C85CCA /* PickerField.swift in Sources */,
 				282C73A22942647C005EC424 /* InitialModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,6 +420,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mars/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -416,7 +433,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mars.project;
+				PRODUCT_BUNDLE_IDENTIFIER = bcc.starbusiness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -432,6 +449,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mars/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -444,7 +462,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mars.project;
+				PRODUCT_BUNDLE_IDENTIFIER = bcc.starbusiness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
