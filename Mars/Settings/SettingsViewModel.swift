@@ -46,6 +46,7 @@ class SettingsViewModel {
             self.router?.showAlert(title: "Error", message: "Please fil all fields")
             return
         }
+//        NetworkService().getPhotos(date: date, camera: camera, page: 1, apiKey: "DEMO_KEY")
     }
 }
 

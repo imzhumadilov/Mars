@@ -26,6 +26,7 @@
 		28C1D7FA2946614300C85CCA /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C1D7F92946614300C85CCA /* PickerView.swift */; };
 		28C1D7FC2946617600C85CCA /* PickerField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C1D7FB2946617600C85CCA /* PickerField.swift */; };
 		28C1D7FE29466E0E00C85CCA /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C1D7FD29466E0E00C85CCA /* UIColor+.swift */; };
+		28C1D80029467A5000C85CCA /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C1D7FF29467A5000C85CCA /* NetworkService.swift */; };
 		5782BE55895D524B3A3D90A9 /* Pods_Mars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F42DF6D6F3922C1628F576 /* Pods_Mars.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		28C1D7F92946614300C85CCA /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 		28C1D7FB2946617600C85CCA /* PickerField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerField.swift; sourceTree = "<group>"; };
 		28C1D7FD29466E0E00C85CCA /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		28C1D7FF29467A5000C85CCA /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		59B6525C97563BD489771490 /* Pods-Mars.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mars.release.xcconfig"; path = "Target Support Files/Pods-Mars/Pods-Mars.release.xcconfig"; sourceTree = "<group>"; };
 		D6F42DF6D6F3922C1628F576 /* Pods_Mars.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mars.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4812CF36C87D4D19C59D744 /* Pods-Mars.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mars.debug.xcconfig"; path = "Target Support Files/Pods-Mars/Pods-Mars.debug.xcconfig"; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			children = (
 				282C7394294263CD005EC424 /* Info.plist */,
 				282C7383294263CB005EC424 /* AppDelegate.swift */,
+				28C1D7FF29467A5000C85CCA /* NetworkService.swift */,
 				282C7385294263CB005EC424 /* SceneDelegate.swift */,
 				28C1D7FD29466E0E00C85CCA /* UIColor+.swift */,
 				282C7387294263CB005EC424 /* ViewController.swift */,
@@ -272,6 +275,7 @@
 				282C738E294263CB005EC424 /* Mars.xcdatamodeld in Sources */,
 				282C73A32942647C005EC424 /* InitialConfigurator.swift in Sources */,
 				282C73AF2942656E005EC424 /* SettingsRouter.swift in Sources */,
+				28C1D80029467A5000C85CCA /* NetworkService.swift in Sources */,
 				282C73AC2942656E005EC424 /* SettingsViewController.swift in Sources */,
 				282C73A02942647C005EC424 /* InitialViewModel.swift in Sources */,
 				282C73A42942647C005EC424 /* InitialRouter.swift in Sources */,
