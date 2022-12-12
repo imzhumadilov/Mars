@@ -164,6 +164,10 @@ extension PhotosViewController: UICollectionViewDelegate, UICollectionViewDataSo
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        self.viewModel?.fetchMorePhotos(row: indexPath.row)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let side = UIScreen.main.bounds.width / 3
         return CGSize(width: side, height: side)

@@ -29,21 +29,16 @@ class PhotosViewModel {
     
     // MARK: - Public functions
     func viewIsReady() {
-        self.showLoader?()
-        self.model.service.getPhotos(date: self.model.date.toString(format: "yyyy-MM-dd"),
-                                     camera: self.model.camera.rawValue,
-                                     page: self.model.page,
-                                     apiKey: "DEMO_KEY") { [weak self] result in
-            guard let self = self else { return }
-            switch result {
-            case .success(let response):
-                self.model.images = response.photos?.compactMap({ $0?.image }) ?? []
-                self.makeSections()
-            case .failure(let error):
-                self.loadDataCompletion?(.failure(error))
-            }
-        }
+        self.getPhotos()
         self.setupNavBar?(self.model.camera.title, self.model.date.toString(format: "d MMM yyyy"))
+    }
+    
+    func fetchMorePhotos(row: Int) {
+        guard self.model.images.count == row + 1,
+              !self.model.isFetching,
+              !self.model.isFinished else { return }
+        self.model.page += 1
+        self.getPhotos()
     }
 }
 
@@ -54,15 +49,39 @@ extension PhotosViewModel {
         let section = CollectionSectionModel()
         
         for image in self.model.images {
-            let photoModel = PhotoCollectionViewCellModel(imageURL: image)
-            photoModel.action = { [weak self] in
-                guard let self = self else { return }
-                print(image)
+            if let imageURL = image.image, let id = image.id {
+                let photoModel = PhotoCollectionViewCellModel(imageURL: imageURL)
+                photoModel.action = { [weak self] in
+                    guard let self = self else { return }
+                    print(id)
+                }
+                section.items.append(photoModel)
             }
-            section.items.append(photoModel)
         }
         
         self.loadDataCompletion?(.success([section]))
+    }
+    
+    private func getPhotos() {
+        print(#function, self.model.page)
+        self.showLoader?()
+        self.model.isFetching = true
+        self.model.service.getPhotos(date: self.model.date.toString(format: "yyyy-MM-dd"),
+                                     camera: self.model.camera.rawValue,
+                                     page: self.model.page,
+                                     apiKey: "DEMO_KEY") { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success(let response):
+                let newImages = response.photos?.compactMap({ $0 }) ?? []
+                self.model.images += newImages
+                self.model.isFinished = newImages.isEmpty
+                self.makeSections()
+            case .failure(let error):
+                self.loadDataCompletion?(.failure(error))
+            }
+            self.model.isFetching = false
+        }
     }
 }
 

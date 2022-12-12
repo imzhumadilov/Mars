@@ -15,8 +15,10 @@ class PhotosModel {
     let date: Date
     let service: NetworkServiceInterface = NetworkService()
     
-    var images: [String] = []
+    var images: [PhotoResponse] = []
     var page = 1
+    var isFetching = false
+    var isFinished = false
     
     // MARK: - Initialization
     init(camera: CameraList, date: Date) {
