@@ -15,6 +15,7 @@ class PhotosModel {
     let date: Date
     let service: NetworkServiceInterface = NetworkService()
     
+    var images: [String] = []
     var page = 1
     
     // MARK: - Initialization

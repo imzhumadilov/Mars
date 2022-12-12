@@ -32,18 +32,36 @@ class PhotosViewModel {
                                      camera: self.model.camera.rawValue,
                                      page: self.model.page,
                                      apiKey: "DEMO_KEY") { [weak self] result in
+            guard let self = self else { return }
             switch result {
             case .success(let response):
-                print(response.photos?.compactMap({ $0?.image }))
+                self.model.images = response.photos?.compactMap({ $0?.image }) ?? []
+                self.makeSections()
             case .failure(let error):
-                print(error)
+                self.loadDataCompletion?(.failure(error))
             }
         }
     }
 }
 
 // MARK: - Module functions
-extension PhotosViewModel { }
+extension PhotosViewModel {
+    
+    private func makeSections() {
+        let section = CollectionSectionModel()
+        
+        for image in self.model.images {
+            let photoModel = PhotoCollectionViewCellModel(imageURL: image)
+            photoModel.action = { [weak self] in
+                guard let self = self else { return }
+                print(image)
+            }
+            section.items.append(photoModel)
+        }
+        
+        self.loadDataCompletion?(.success([section]))
+    }
+}
 
 // MARK: - PhotosViewModelInput
 extension PhotosViewModel: PhotosViewModelInput {

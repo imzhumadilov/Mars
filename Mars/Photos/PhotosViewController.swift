@@ -10,8 +10,9 @@ import UIKit
 import MBProgressHUD
 
 final class PhotosViewController: UIViewController {
-
+    
     // MARK: - UIElements
+    private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     
     // MARK: - Props
     public var viewModel: PhotosViewModel?
@@ -36,19 +37,32 @@ final class PhotosViewController: UIViewController {
     
     // MARK: - Setup functions
     private func setupComponents() {
-        self.navigationItem.title = ""
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.scrollDirection = .vertical
+        self.collectionView.collectionViewLayout = flowLayout
+        self.collectionView.showsHorizontalScrollIndicator = false
+        self.collectionView.backgroundColor = .clear
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
+        self.collectionView.register(PhotoCollectionViewCell.self)
     }
     
     private func setupActions() { }
     
     private func applyStyles() {
-        self.view.backgroundColor = UIColor.white
+        self.view.backgroundColor = UIColor(hex: "#DCCEBE")
     }
     
-    private func configureSubviews() { }
+    private func configureSubviews() {
+        self.view.addSubview(self.collectionView)
+    }
     
-    private func configureConstraints() { }
+    private func configureConstraints() {
+        self.collectionView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+    }
     
     // MARK: - Module functions
     private func bindViewModel() {
@@ -58,7 +72,7 @@ final class PhotosViewController: UIViewController {
             case .success(let sections):
                 self.sections = sections
                 DispatchQueue.main.async {
-//                    self.tableView.reloadDataAnimated()
+                    self.collectionView.reloadData()
                 }
             case .failure(let error):
                 self.showAlert(title: "Error", message: error.localizedDescription)
@@ -89,5 +103,41 @@ extension PhotosViewController {
         DispatchQueue.main.async {
             self.present(alertController, animated: true)
         }
+    }
+}
+
+// MARK: - UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
+extension PhotosViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return self.sections.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.sections[section].items.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let model = self.sections[indexPath.section].items[indexPath.item] as? PhotoCollectionViewCellModel else { return UICollectionViewCell() }
+        let cell = collectionView.dequeueReusableCell(forIndexPath: indexPath) as PhotoCollectionViewCell
+        cell.model = model
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let side = UIScreen.main.bounds.width / 3
+        return CGSize(width: side, height: side)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return .zero
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return .zero
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return .zero
     }
 }
