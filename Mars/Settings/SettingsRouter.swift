@@ -9,7 +9,7 @@
 import UIKit
 
 protocol SettingsRouterInput {
-    func showAlert(title: String, message: String)
+    func showAlert(title: String?, message: String?)
     func showPhotos(model: PhotosModel)
 }
 
@@ -19,7 +19,7 @@ final class SettingsRouter: SettingsRouterInput {
     weak var viewController: SettingsViewController?
     
     // MARK: - SettingsRouterInput
-    func showAlert(title: String, message: String) {
+    func showAlert(title: String?, message: String?) {
         self.viewController?.showAlert(title: title, message: message)
     }
     

@@ -20,7 +20,6 @@ class PhotosViewModel {
     public var setupNavBar: ((_ camera: String, _ date: String) -> Void)?
     public var showLoader: (() -> Void)?
     public var hideLoader: (() -> Void)?
-    public var showAlert: ((String?, String?) -> Void)?
     
     // MARK: - Initialization
     init(model: PhotosModel) {
@@ -53,7 +52,7 @@ extension PhotosViewModel {
                 let photoModel = PhotoCollectionViewCellModel(imageURL: imageURL)
                 photoModel.action = { [weak self] in
                     guard let self = self else { return }
-                    print(id)
+                    self.router?.showImage(model: ImageModel(id: id, imageURL: imageURL))
                 }
                 section.items.append(photoModel)
             }
@@ -63,7 +62,6 @@ extension PhotosViewModel {
     }
     
     private func getPhotos() {
-        print(#function, self.model.page)
         self.showLoader?()
         self.model.isFetching = true
         self.model.service.getPhotos(date: self.model.date.toString(format: "yyyy-MM-dd"),
@@ -77,6 +75,11 @@ extension PhotosViewModel {
                 self.model.images += newImages
                 self.model.isFinished = newImages.isEmpty
                 self.makeSections()
+                if self.model.images.isEmpty {
+                    self.router?.showAlert(title: "No images", message: nil)
+                } else if newImages.isEmpty {
+                    self.router?.showAlert(title: "No more images", message: nil)
+                }
             case .failure(let error):
                 self.loadDataCompletion?(.failure(error))
             }

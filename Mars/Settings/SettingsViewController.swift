@@ -100,7 +100,7 @@ final class SettingsViewController: UIViewController {
 // MARK: - Actions
 extension SettingsViewController {
     
-    func showAlert(title: String, message: String) {
+    func showAlert(title: String?, message: String?) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: { _ in })
         alertController.addAction(action)
@@ -111,6 +111,7 @@ extension SettingsViewController {
     
     @objc
     private func exploreButtonTapped() {
+        self.view.endEditing(true)
         self.viewModel?.exploreButtonTapped()
     }
 }

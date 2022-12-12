@@ -40,7 +40,7 @@ final class PhotosViewController: UIViewController {
     
     // MARK: - Setup functions
     private func setupComponents() {
-        self.backButton.setImage(UIImage(named: "ArrowLeft"), for: .normal)
+        self.backButton.setImage(UIImage(named: "ArrowLeftBlack"), for: .normal)
         
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .vertical
@@ -113,6 +113,7 @@ final class PhotosViewController: UIViewController {
             guard let self = self else { return }
             self.cameraLabel.text = camera
             self.dateLabel.text = date
+            self.view.layoutIfNeeded()
         }
         
         self.viewModel?.showLoader = { [weak self] in
@@ -130,7 +131,7 @@ final class PhotosViewController: UIViewController {
 // MARK: - Actions
 extension PhotosViewController {
     
-    func showAlert(title: String, message: String) {
+    func showAlert(title: String?, message: String?) {
         MBProgressHUD.hide(for: self.navigationController?.view ?? self.view, animated: true)
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: { _ in })
