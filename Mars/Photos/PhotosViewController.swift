@@ -12,6 +12,9 @@ import MBProgressHUD
 final class PhotosViewController: UIViewController {
     
     // MARK: - UIElements
+    private let backButton = UIButton()
+    private let cameraLabel = UILabel()
+    private let dateLabel = UILabel()
     private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     
     // MARK: - Props
@@ -37,6 +40,7 @@ final class PhotosViewController: UIViewController {
     
     // MARK: - Setup functions
     private func setupComponents() {
+        self.backButton.setImage(UIImage(named: "ArrowLeft"), for: .normal)
         
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .vertical
@@ -48,19 +52,44 @@ final class PhotosViewController: UIViewController {
         self.collectionView.register(PhotoCollectionViewCell.self)
     }
     
-    private func setupActions() { }
+    private func setupActions() {
+        self.backButton.addTarget(self, action: #selector(self.backButtonTapped), for: .touchUpInside)
+    }
     
     private func applyStyles() {
         self.view.backgroundColor = UIColor(hex: "#DCCEBE")
+        
+        self.cameraLabel.textColor = .black
+        self.cameraLabel.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+        
+        self.dateLabel.textColor = .black
+        self.dateLabel.font = UIFont.systemFont(ofSize: 14, weight: .regular)
     }
     
     private func configureSubviews() {
+        self.view.addSubview(self.backButton)
+        self.view.addSubview(self.cameraLabel)
+        self.view.addSubview(self.dateLabel)
         self.view.addSubview(self.collectionView)
     }
     
     private func configureConstraints() {
+        self.backButton.snp.makeConstraints {
+            $0.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(16)
+            $0.leading.equalToSuperview().inset(16)
+            $0.width.height.equalTo(24)
+        }
+        self.cameraLabel.snp.makeConstraints {
+            $0.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(4)
+            $0.centerX.equalToSuperview()
+        }
+        self.dateLabel.snp.makeConstraints {
+            $0.top.equalTo(self.cameraLabel.snp.bottom).offset(8)
+            $0.centerX.equalToSuperview()
+        }
         self.collectionView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.top.equalTo(self.dateLabel.snp.bottom).offset(20)
+            $0.leading.trailing.bottom.equalToSuperview()
         }
     }
     
@@ -78,6 +107,12 @@ final class PhotosViewController: UIViewController {
                 self.showAlert(title: "Error", message: error.localizedDescription)
             }
             DispatchQueue.main.async { MBProgressHUD.hide(for: self.navigationController?.view ?? self.view, animated: true) }
+        }
+        
+        self.viewModel?.setupNavBar = { [weak self] camera, date in
+            guard let self = self else { return }
+            self.cameraLabel.text = camera
+            self.dateLabel.text = date
         }
         
         self.viewModel?.showLoader = { [weak self] in
@@ -103,6 +138,11 @@ extension PhotosViewController {
         DispatchQueue.main.async {
             self.present(alertController, animated: true)
         }
+    }
+    
+    @objc
+    private func backButtonTapped() {
+        self.navigationController?.popViewController(animated: true)
     }
 }
 

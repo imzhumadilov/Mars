@@ -17,6 +17,7 @@ class PhotosViewModel {
     public var router: PhotosRouterInput?
     
     public var loadDataCompletion: ((Result<[CollectionSectionModel], Error>) -> Void)?
+    public var setupNavBar: ((_ camera: String, _ date: String) -> Void)?
     public var showLoader: (() -> Void)?
     public var hideLoader: (() -> Void)?
     public var showAlert: ((String?, String?) -> Void)?
@@ -28,6 +29,7 @@ class PhotosViewModel {
     
     // MARK: - Public functions
     func viewIsReady() {
+        self.showLoader?()
         self.model.service.getPhotos(date: self.model.date.toString(format: "yyyy-MM-dd"),
                                      camera: self.model.camera.rawValue,
                                      page: self.model.page,
@@ -41,6 +43,7 @@ class PhotosViewModel {
                 self.loadDataCompletion?(.failure(error))
             }
         }
+        self.setupNavBar?(self.model.camera.title, self.model.date.toString(format: "d MMM yyyy"))
     }
 }
 
