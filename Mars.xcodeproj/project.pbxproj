@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		282C7384294263CB005EC424 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282C7383294263CB005EC424 /* AppDelegate.swift */; };
 		282C7386294263CB005EC424 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282C7385294263CB005EC424 /* SceneDelegate.swift */; };
-		282C7388294263CB005EC424 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282C7387294263CB005EC424 /* ViewController.swift */; };
 		282C738E294263CB005EC424 /* Mars.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 282C738C294263CB005EC424 /* Mars.xcdatamodeld */; };
 		282C7390294263CD005EC424 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 282C738F294263CD005EC424 /* Assets.xcassets */; };
 		282C7393294263CD005EC424 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 282C7391294263CD005EC424 /* LaunchScreen.storyboard */; };
@@ -30,6 +29,10 @@
 		2888AB9B294790D2007D2A52 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888AB96294790D2007D2A52 /* ImageModel.swift */; };
 		2888AB9C294790D2007D2A52 /* ImageConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888AB97294790D2007D2A52 /* ImageConfigurator.swift */; };
 		2888AB9D294790D2007D2A52 /* ImageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888AB98294790D2007D2A52 /* ImageRouter.swift */; };
+		2888ABA92947B58B007D2A52 /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888ABA82947B58B007D2A52 /* UICollectionView+.swift */; };
+		2888ABAB2947B5AA007D2A52 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888ABAA2947B5AA007D2A52 /* UIView+.swift */; };
+		2888ABAF2947B5D5007D2A52 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888ABAE2947B5D5007D2A52 /* Date+.swift */; };
+		2888ABB52947B8AF007D2A52 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888ABB42947B8AF007D2A52 /* Camera.swift */; };
 		28C1D7FA2946614300C85CCA /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C1D7F92946614300C85CCA /* PickerView.swift */; };
 		28C1D7FC2946617600C85CCA /* PickerField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C1D7FB2946617600C85CCA /* PickerField.swift */; };
 		28C1D7FE29466E0E00C85CCA /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C1D7FD29466E0E00C85CCA /* UIColor+.swift */; };
@@ -48,7 +51,6 @@
 		282C7380294263CB005EC424 /* Mars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		282C7383294263CB005EC424 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		282C7385294263CB005EC424 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		282C7387294263CB005EC424 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		282C738D294263CB005EC424 /* Mars.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mars.xcdatamodel; sourceTree = "<group>"; };
 		282C738F294263CD005EC424 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		282C7392294263CD005EC424 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -70,6 +72,10 @@
 		2888AB96294790D2007D2A52 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		2888AB97294790D2007D2A52 /* ImageConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageConfigurator.swift; sourceTree = "<group>"; };
 		2888AB98294790D2007D2A52 /* ImageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRouter.swift; sourceTree = "<group>"; };
+		2888ABA82947B58B007D2A52 /* UICollectionView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+.swift"; sourceTree = "<group>"; };
+		2888ABAA2947B5AA007D2A52 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		2888ABAE2947B5D5007D2A52 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
+		2888ABB42947B8AF007D2A52 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		28C1D7F92946614300C85CCA /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 		28C1D7FB2946617600C85CCA /* PickerField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerField.swift; sourceTree = "<group>"; };
 		28C1D7FD29466E0E00C85CCA /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
@@ -129,20 +135,11 @@
 			isa = PBXGroup;
 			children = (
 				282C7394294263CD005EC424 /* Info.plist */,
-				282C7383294263CB005EC424 /* AppDelegate.swift */,
-				28C1D80C2946853B00C85CCA /* CollectionSectionModel.swift */,
-				28C1D7FF29467A5000C85CCA /* NetworkService.swift */,
-				28C1D80F294688E800C85CCA /* PhotosResponse.swift */,
-				282C7385294263CB005EC424 /* SceneDelegate.swift */,
-				28C1D7FD29466E0E00C85CCA /* UIColor+.swift */,
-				282C7387294263CB005EC424 /* ViewController.swift */,
-				282C738F294263CD005EC424 /* Assets.xcassets */,
-				2888AB9329478F8A007D2A52 /* Image */,
-				282C739A2942645E005EC424 /* Initial */,
-				282C7391294263CD005EC424 /* LaunchScreen.storyboard */,
-				282C738C294263CB005EC424 /* Mars.xcdatamodeld */,
-				28C1D80129467D3300C85CCA /* Photos */,
-				282C73A52942653C005EC424 /* Settings */,
+				2888AB9E2947B350007D2A52 /* ApplicationLayer */,
+				2888ABA42947B4AF007D2A52 /* DataLayer */,
+				2888ABA22947B442007D2A52 /* DomainLayer */,
+				2888ABA32947B47E007D2A52 /* PresentationLayer */,
+				2888ABB22947B87E007D2A52 /* ServiceLayer */,
 			);
 			path = Mars;
 			sourceTree = "<group>";
@@ -167,7 +164,6 @@
 				282C73AA2942656E005EC424 /* SettingsRouter.swift */,
 				282C73A72942656E005EC424 /* SettingsViewController.swift */,
 				282C73A62942656E005EC424 /* SettingsViewModel.swift */,
-				28C1D7F82946612000C85CCA /* CustomView */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -201,13 +197,131 @@
 			path = Image;
 			sourceTree = "<group>";
 		};
-		28C1D7F82946612000C85CCA /* CustomView */ = {
+		2888AB9E2947B350007D2A52 /* ApplicationLayer */ = {
 			isa = PBXGroup;
 			children = (
-				28C1D7F92946614300C85CCA /* PickerView.swift */,
-				28C1D7FB2946617600C85CCA /* PickerField.swift */,
+				282C7383294263CB005EC424 /* AppDelegate.swift */,
+				282C7385294263CB005EC424 /* SceneDelegate.swift */,
+				282C7391294263CD005EC424 /* LaunchScreen.storyboard */,
+				2888AB9F2947B376007D2A52 /* Extension */,
+				2888ABA02947B394007D2A52 /* Resources */,
 			);
-			path = CustomView;
+			path = ApplicationLayer;
+			sourceTree = "<group>";
+		};
+		2888AB9F2947B376007D2A52 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2888ABA72947B572007D2A52 /* UIKit */,
+				2888ABA62947B56B007D2A52 /* Foundation */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		2888ABA02947B394007D2A52 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2888ABA12947B3A7007D2A52 /* Assets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2888ABA12947B3A7007D2A52 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				282C738F294263CD005EC424 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		2888ABA22947B442007D2A52 /* DomainLayer */ = {
+			isa = PBXGroup;
+			children = (
+				2888ABB12947B615007D2A52 /* Network */,
+			);
+			path = DomainLayer;
+			sourceTree = "<group>";
+		};
+		2888ABA32947B47E007D2A52 /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				2888ABA52947B51A007D2A52 /* Components */,
+				2888AB9329478F8A007D2A52 /* Image */,
+				282C739A2942645E005EC424 /* Initial */,
+				28C1D80129467D3300C85CCA /* Photos */,
+				282C73A52942653C005EC424 /* Settings */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		2888ABA42947B4AF007D2A52 /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				282C738C294263CB005EC424 /* Mars.xcdatamodeld */,
+				2888ABB02947B600007D2A52 /* Response */,
+			);
+			path = DataLayer;
+			sourceTree = "<group>";
+		};
+		2888ABA52947B51A007D2A52 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				28C1D80C2946853B00C85CCA /* CollectionSectionModel.swift */,
+				28C1D7FB2946617600C85CCA /* PickerField.swift */,
+				28C1D7F92946614300C85CCA /* PickerView.swift */,
+				2850326329471E0500F2D3FA /* Cells */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2888ABA62947B56B007D2A52 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				2888ABAE2947B5D5007D2A52 /* Date+.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		2888ABA72947B572007D2A52 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				2888ABA82947B58B007D2A52 /* UICollectionView+.swift */,
+				28C1D7FD29466E0E00C85CCA /* UIColor+.swift */,
+				2888ABAA2947B5AA007D2A52 /* UIView+.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		2888ABB02947B600007D2A52 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				28C1D80F294688E800C85CCA /* PhotosResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		2888ABB12947B615007D2A52 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				28C1D7FF29467A5000C85CCA /* NetworkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		2888ABB22947B87E007D2A52 /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				2888ABB32947B88A007D2A52 /* Enums */,
+			);
+			path = ServiceLayer;
+			sourceTree = "<group>";
+		};
+		2888ABB32947B88A007D2A52 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				2888ABB42947B8AF007D2A52 /* Camera.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 		28C1D80129467D3300C85CCA /* Photos */ = {
@@ -218,7 +332,6 @@
 				28C1D80629467D5800C85CCA /* PhotosRouter.swift */,
 				28C1D80329467D5800C85CCA /* PhotosViewController.swift */,
 				28C1D80229467D5800C85CCA /* PhotosViewModel.swift */,
-				2850326329471E0500F2D3FA /* Cells */,
 			);
 			path = Photos;
 			sourceTree = "<group>";
@@ -358,8 +471,8 @@
 				28C1D80D2946853B00C85CCA /* CollectionSectionModel.swift in Sources */,
 				282C73A02942647C005EC424 /* InitialViewModel.swift in Sources */,
 				2850326729471E2E00F2D3FA /* PhotoCollectionViewCell.swift in Sources */,
+				2888ABA92947B58B007D2A52 /* UICollectionView+.swift in Sources */,
 				282C73A42942647C005EC424 /* InitialRouter.swift in Sources */,
-				282C7388294263CB005EC424 /* ViewController.swift in Sources */,
 				28C1D80829467D5800C85CCA /* PhotosViewController.swift in Sources */,
 				2888AB9D294790D2007D2A52 /* ImageRouter.swift in Sources */,
 				2888AB99294790D2007D2A52 /* ImageViewModel.swift in Sources */,
@@ -370,6 +483,9 @@
 				282C73AB2942656E005EC424 /* SettingsViewModel.swift in Sources */,
 				28C1D80929467D5800C85CCA /* PhotosModel.swift in Sources */,
 				282C73A12942647C005EC424 /* InitialViewController.swift in Sources */,
+				2888ABAF2947B5D5007D2A52 /* Date+.swift in Sources */,
+				2888ABB52947B8AF007D2A52 /* Camera.swift in Sources */,
+				2888ABAB2947B5AA007D2A52 /* UIView+.swift in Sources */,
 				282C7384294263CB005EC424 /* AppDelegate.swift in Sources */,
 				2850326829471E2E00F2D3FA /* PhotoCollectionViewCellModel.swift in Sources */,
 				282C7386294263CB005EC424 /* SceneDelegate.swift in Sources */,
@@ -444,7 +560,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -498,7 +614,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -516,9 +632,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = N8WXG988VJ;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mars/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Mars;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -529,7 +646,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = bcc.starbusiness;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mars.project;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -545,9 +662,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = N8WXG988VJ;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mars/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Mars;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -558,7 +676,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = bcc.starbusiness;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mars.project;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

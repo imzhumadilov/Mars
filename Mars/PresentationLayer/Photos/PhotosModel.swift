@@ -11,7 +11,7 @@ import Foundation
 class PhotosModel {
     
     // MARK: - Props
-    let camera: CameraList
+    let camera: Camera
     let date: Date
     let service: NetworkServiceInterface = NetworkService()
     
@@ -21,7 +21,7 @@ class PhotosModel {
     var isFinished = false
     
     // MARK: - Initialization
-    init(camera: CameraList, date: Date) {
+    init(camera: Camera, date: Date) {
         self.camera = camera
         self.date = date
     }

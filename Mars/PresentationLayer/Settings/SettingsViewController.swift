@@ -47,9 +47,6 @@ final class SettingsViewController: UIViewController {
         
         self.dateView.configurePicker(title: "Date", type: .date, delegate: self)
         
-        self.exploreButton.backgroundColor = UIColor(hex: "#BF2E0E")
-        self.exploreButton.setTitleColor(.white, for: .normal)
-        self.exploreButton.titleLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
         self.exploreButton.setTitle("Explore", for: .normal)
         self.exploreButton.layer.cornerRadius = 10
         self.exploreButton.clipsToBounds = true
@@ -61,6 +58,10 @@ final class SettingsViewController: UIViewController {
     
     private func applyStyles() {
         self.view.backgroundColor = UIColor.clear
+        
+        self.exploreButton.backgroundColor = UIColor(hex: "#BF2E0E")
+        self.exploreButton.setTitleColor(.white, for: .normal)
+        self.exploreButton.titleLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
     }
     
     private func configureSubviews() {

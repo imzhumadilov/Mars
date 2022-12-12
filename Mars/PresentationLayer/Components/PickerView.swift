@@ -12,7 +12,7 @@ enum PickerType {
     case date
 }
 
-class PickerView: UIView {
+final class PickerView: UIView {
     
     // MARK: - UIElemnts
     private let titleLabel = UILabel()

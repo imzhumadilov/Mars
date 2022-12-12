@@ -57,7 +57,6 @@ extension PhotosViewModel {
                 section.items.append(photoModel)
             }
         }
-        
         self.loadDataCompletion?(.success([section]))
     }
     

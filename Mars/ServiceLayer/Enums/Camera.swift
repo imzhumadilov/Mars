@@ -1,25 +1,13 @@
 //
-//  SettingsModel.swift
+//  Camera.swift
 //  Mars
 //
-//  Created by Ilyas Zhumadilov on 09.12.2022.
-//  Copyright © 2022 ___ORGANIZATIONNAME___. All rights reserved.
+//  Created by Ilyas Zhumadilov on 13.12.2022.
 //
 
 import Foundation
 
-class SettingsModel {
-    
-    // MARK: - Props
-    let cameraList = CameraList.allCases
-    var camera: CameraList?
-    var date: Date?
-    
-    // MARK: - Initialization
-    init() { }
-}
-
-enum CameraList: String, CaseIterable {
+enum Camera: String, CaseIterable {
     case fhaz = "FHAZ"
     case rhaz = "RHAZ"
     case mast = "MAST"

@@ -11,7 +11,7 @@ protocol NetworkServiceInterface {
     func getPhotos(date: String, camera: String, page: Int, apiKey: String, completion: @escaping (Result<PhotosListResponse, Error>) -> Void)
 }
 
-class NetworkService: NetworkServiceInterface {
+final class NetworkService: NetworkServiceInterface {
     
     private let url = "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos"
     

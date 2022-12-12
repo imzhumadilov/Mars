@@ -12,7 +12,7 @@ protocol PickerFieldDelegate: AnyObject {
     func provideDate(textField: UITextField, date: Date)
 }
 
-class PickerField: UITextField {
+final class PickerField: UITextField {
     
     // MARK: - Properties
     private let pickerView = UIPickerView()
